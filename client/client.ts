@@ -7,12 +7,12 @@ import {
   LanguageClientOptions
 } from 'vscode-languageclient';
 
-export function initializeLanguageClient(serverModule: string): LanguageClient {
+export function initializeLanguageClient(serverModule: string, folder: vscode.WorkspaceFolder): LanguageClient {
   const debugOptions = { execArgv: ['--nolazy', '--inspect=6005'] };
 
   const serverOptions: ServerOptions = {
-    run: { module: serverModule, transport: TransportKind.ipc },
-    debug: { module: serverModule, transport: TransportKind.ipc, options: debugOptions }
+    run: { module: serverModule, transport: TransportKind.ipc},
+    debug: { module: serverModule, transport: TransportKind.ipc, options: debugOptions}
   };
 
   const documentSelector = ['vue'];
@@ -25,8 +25,10 @@ export function initializeLanguageClient(serverModule: string): LanguageClient {
       fileEvents: vscode.workspace.createFileSystemWatcher('{**/*.js,**/*.ts}', true, false, true)
     },
     initializationOptions: {
-      config
+      config,
+      folder
     },
+    workspaceFolder: folder,
     revealOutputChannelOn: RevealOutputChannelOn.Never
   };
 
