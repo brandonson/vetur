@@ -3560,14 +3560,9 @@ progress@^2.0.0:
   resolved "https://registry.yarnpkg.com/progress/-/progress-2.0.0.tgz#8a1be366bf8fc23db2bd23f10c6fe920b4389d1f"
   integrity sha1-ihvjZr+Pwj2yvSPxDG/pILQ4nR8=
 
-"property-information@git+https://github.com/StarpTech/property-information.git#attr_normalization_fix":
+"property-information@https://github.com/StarpTech/property-information#attr_normalization_fix":
   version "4.2.0"
-<<<<<<< HEAD
-  resolved "https://registry.yarnpkg.com/property-information/-/property-information-4.2.0.tgz#f0e66e07cbd6fed31d96844d958d153ad3eb486e"
-  integrity sha512-TlgDPagHh+eBKOnH2VYvk8qbwsCG/TAJdmTL7f1PROUcSO8qt/KSmShEQ/OKvock8X9tFjtqjCScyOkkkvIKVQ==
-=======
-  resolved "git+https://github.com/StarpTech/property-information.git#e29762a02f9cf1d000da6c1cdb479800c60aa2c2"
->>>>>>> Upgrade prettyhtml to 0.3.3 for #932
+  resolved "https://github.com/StarpTech/property-information#e29762a02f9cf1d000da6c1cdb479800c60aa2c2"
   dependencies:
     xtend "^4.0.1"
 
